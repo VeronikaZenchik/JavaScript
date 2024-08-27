@@ -47,3 +47,52 @@ function getAgeType(age) {
 }
 
 console.log(getAgeType(14));
+
+// return без данных будет undefined
+
+// FUCTION DECLARATION
+// функцию можно использвовать раньше, чем она объявлена в коде
+// функцию можно перезаписать
+
+
+
+
+// функцию можно вызвать след образом - FUCTION EXPRESSION
+
+const logHello1 = function() {
+  console.log('Hello!');
+}
+// такую фунцию нельзя переопределить(перезаписать), но если let то можно
+// такую фцнкцитю нельзя ее использовать до ее объявления
+
+
+
+// ARROW FUNCTION (стрклочная функция)
+
+const logBye = (parametr) => {
+  console.log('Привет!');
+}
+
+// нельзя до объявения в коде
+// в стрельчной конструкции нет своего контекста - this
+// монжо реализовать в одну строку
+const sum2 = (a, b) => a + b
+console.log(sum(1, 2));
+
+
+const logMessage2 = (actionBefore, actionAfter) => {
+  actionBefore()
+  console.log('Hello!');
+  actionAfter()
+}
+
+const fn1 = () => console.log('before');
+const fn2 = () => console.log('after');
+logMessage2(fn1, fn2) // наши констакты используем в качестве аргументов
+
+// ответ будет
+// before
+// Hello!
+// after
+
+
