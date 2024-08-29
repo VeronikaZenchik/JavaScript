@@ -79,3 +79,18 @@ console.log(result2); // Вывод: 2 (поскольку y было увели
 // \\	    Обратный слеш
 // \t	     Знак табуляции
 // \b, \f, \v	    Backspace, Form Feed и Vertical Tab — оставлены для обратной совместимости, сейчас не используются.
+
+
+// Изменение регистра
+// Методы toLowerCase() и toUpperCase() меняют регистр символов:
+
+console.log( 'Interface'.toUpperCase() ); // INTERFACE
+console.log( 'Interface'.toLowerCase() ); // interface
+// Если мы захотим перевести в нижний регистр какой-то конкретный символ:
+
+console.log( 'Interface'[0].toLowerCase() ); // 'i'
+
+
+// Строки также имеют ещё кое-какие полезные методы:
+// str.trim() — убирает пробелы в начале и конце строки.
+// str.repeat(n) — повторяет строку n раз.
