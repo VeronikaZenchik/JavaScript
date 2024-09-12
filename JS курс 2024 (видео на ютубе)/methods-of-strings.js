@@ -30,7 +30,26 @@ console.log(messageWith.startsWith('Нач')); //true
 console.log(messageWith.endsWith('нец')); // true
 
 
-// Обрезать строку, получить подстроку из строки
+// substring(indexStart, indexEnd) - используется для извлечения подстроки из строки
+
+// - indexStart: Индекс, с которого начинается извлечение (включительно).
+// - indexEnd: Индекс, на котором заканчивается извлечение (не включая его).
+
+const str = 'JavaScript'
+
+console.log((str.substring(0,4)));
+
+// repeat - повторяет строку
+
+console.log(str.repeat(3));
+
+
+// replace - заменить часть строки, принимает два аргумента что меняем и на что меняем, будет менять только первое обнаруженое
+// replaceAll - меняет все, а не первое найденное
+
+const messageReplace = 'Я изучаю бэкенд'
+
+console.log(messageReplace.replace('бэкенд', 'фронтенд'));
 
 
 
