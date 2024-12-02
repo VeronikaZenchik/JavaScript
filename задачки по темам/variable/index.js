@@ -47,8 +47,10 @@ const firstName = "John"
 const lastName = "Doe"
 
 let join = `${firstName} ${lastName}`
+let fullName = firstName + " " + lastName;
 
 console.log(join);
+console.log(fullName);
 
 
 // Задача 5: Преобразование типов
@@ -133,7 +135,6 @@ let strNum = +str10
 console.log(strNum);
 
 let result10 = num10 + strNum
-
 console.log(result10);
 
 
