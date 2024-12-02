@@ -57,7 +57,8 @@ console.log(strToBool);
 
 // Solution:
 let value = "123abc"
-console.log(typeof value);
+let isNumber = !isNaN(Number(value));
+console.log(isNumber);
 
 
 // Задача 7: Преобразование массива в строку
@@ -87,7 +88,7 @@ let obj9 = {
   age: 25 
 }
 
-let objToStr = obj9.toString()
+let objToStr = JSON.stringify(obj9)
 console.log(objToStr);
 
 
@@ -96,7 +97,7 @@ console.log(objToStr);
 
 // Solution:
 let str10 = '{"name":"Alice","age":25}'
-let strToObj = Object(str10)
+let strToObj = SON.parse(str10);
 
 console.log(strToObj);
 
@@ -106,7 +107,7 @@ console.log(strToObj);
 
 // Solution:
 let arr11 = [1, 2, 3, 4, 5]
-console.log(typeof arr11);
+console.log(Array.isArray(arr11));
 
 
 // Задача 12: Преобразование числа с плавающей точкой в целое число
@@ -124,7 +125,7 @@ console.log(result12);
 // Solution:
 let str13 = "3.14"
 let number = Number(str13)
-console.log(str13);
+console.log(number);
 
 
 // Задача 14: Преобразование булева значения в число
