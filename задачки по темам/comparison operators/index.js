@@ -115,7 +115,7 @@ console.log(result11);
 let a12 = 5
 let b12 = 10
 let c12 = 7
-let result12 = a9 >= b9
+let result12 = a12 < c12 && c12 < b12;
 console.log(result12);
 
 // Задача 13: Сравнение с использованием оператора >= и <=
@@ -125,7 +125,7 @@ console.log(result12);
 let a13 = 5
 let b13 = 10
 let c13 = 7
-let result13 = a9 >= b9
+let result13 = a13 <= c13 && c13 <= b13;
 console.log(result13);
 
 
