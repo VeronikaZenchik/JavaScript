@@ -20,7 +20,7 @@ console.log(str2.toLowerCase())
 
 // Solution:
 let str3 =  "JavaScript is awesome"
-let result3 = str3.slice(0,10)
+let result3 = str3.slice(11)
 console.log(result3);
 
 
@@ -74,7 +74,7 @@ console.log(result8);
 
 // Solution:
 let str9 = ""
-let result9 = str9.trim()
+let result9 = str9.length === 0
 console.log(result9);
 
 
