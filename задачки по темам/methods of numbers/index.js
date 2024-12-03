@@ -29,7 +29,7 @@ console.log(result3)
 // Описание: Напишите код, который генерирует случайное число от 0 до 100 и выведите результат в консоль.
 
 // Solution:
-let randomNumber = Math.random() * 101
+let randomNumber =  Math.floor(Math.random() * 101);
 console.log(randomNumber)
 
 
@@ -66,7 +66,7 @@ console.log(result7)
 
 // Solution:
 let num8 = NaN
-let result8 = num8 == NaN
+let result8 = isNaN(num8);
 console.log(result8)
 
 
@@ -83,7 +83,7 @@ console.log(result9)
 // Описание: Объявите переменную num и присвойте ей значение -42. Напишите код, который получает абсолютное значение этого числа и выведите результат в консоль.
 
 // Solution:
-let num10 = +42
+let num10 = -42
 let result10 = Math.abs(num10)
 console.log(result10)
 
@@ -101,7 +101,7 @@ console.log(random)
 
 // Solution:
 let num12 = Infinity
-let result12 = num12 == Infinity
+let result12 = isFinite(num12)
 console.log(result12)
 
 
@@ -110,7 +110,7 @@ console.log(result12)
 
 // Solution:
 let num13 = 123456
-let result13 = num13.toPrecision(5)
+let result13 = num13.toExponential();
 console.log(result13)
 
 
