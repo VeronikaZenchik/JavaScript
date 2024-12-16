@@ -116,7 +116,7 @@ console.log(taskSeven(2));
 
 // Solution:
 const taskEigth = (a, b, c) => {
-if (a + b > c) {
+if (a + b > c && a + c > b && b + c > a) {
   return "Можно построить треугольник"
 } else {
   return "Нельзя построить треугольник"
@@ -151,10 +151,11 @@ console.log(taskNine(a = 3, b = 4, c = 5));
 
 // Solution:
 const taskTen = (simple) => {
-  if(simple % simple === 0) {
-    return "Простое"
+  if (simple <= 1) return "Не простое";
+  for (let i = 2; i <= Math.sqrt(simple); i++) {
+    if (simple % i === 0) return "Не простое";
   }
-  return "Не простое"
+  return "Простое";
 }
 console.log(taskTen(7));
 console.log(taskTen(10));
