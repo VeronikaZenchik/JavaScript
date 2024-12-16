@@ -348,3 +348,21 @@ while (v <= 20) {
     console.log(v);
   }
 }
+
+
+// ЗАДАЧИ СРЕДНЕЙ СЛОЖНОСТИ
+
+// Задача 1: Сумма четных чисел в диапазоне
+// Напишите программу, которая принимает два числа start и end и вычисляет сумму всех четных чисел в этом диапазоне (включая границы).
+
+// Solutions:
+let start = 1;
+let end = 10;
+let resSum = 0
+while (start <= end) {
+  start++
+  if (start % 2 === 0) {
+    resSum += start
+  }
+}
+console.log(resSum);
