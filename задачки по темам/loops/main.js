@@ -9,51 +9,51 @@
 
 // Solution:
 
-// for (let i = 1; i <= 10; i++) {
-//   console.log(i);
-// }
+for (let i = 1; i <= 10; i++) {
+  console.log(i);
+}
 
 
 // Задача 2: Вывод чисел от 10 до 1
 // Описание: Напишите цикл for, который выводит числа от 10 до 1 в обратном порядке.
 
 // Solution:
-// for (let j = 10; j => 1; j--) {
-//   console.log(j);
-// }
+for (let j = 10; j >= 1; j--) {
+  console.log(j);
+}
 
 
 // Задача 3: Сумма чисел от 1 до 100
 // Описание: Напишите цикл for, который вычисляет сумму всех чисел от 1 до 100.
 
 // Solution:
-// let result3 = 0
-// for (let k = 1; k <= 100; k++) {
-//   result3 += k
-// }
-// console.log(result3);
+let result3 = 0
+for (let k = 1; k <= 100; k++) {
+  result3 += k
+}
+console.log(result3);
 
 
 // Задача 4: Вывод четных чисел от 1 до 20
 // Описание: Напишите цикл for, который выводит все четные числа от 1 до 20.
 
 // Solution:
-// for (let l = 1; l <= 20; l++) {
-//   if (i % 2 === 0) {
-//     console.log(l);
-//   }
-// }
+for (let l = 1; l <= 20; l++) {
+  if (l % 2 === 0) {
+    console.log(l);
+  }
+}
 
 
 // Задача 5: Вывод чисел, делящихся на 3
 // Описание: Напишите цикл for, который выводит все числа от 1 до 30, которые делятся на 3.
 
 // Solution:
-// for (let t = 1; t <= 30; t++) {
-//   if(t % 3 === 0){
-//     console.log(t)
-//   }
-// }
+for (let t = 1; t <= 30; t++) {
+  if(t % 3 === 0){
+    console.log(t)
+  }
+}
 
 
 // Задачи на цикл WHILE
@@ -73,7 +73,7 @@ while (i <= 10) {
 
 // Solution:
 let j = 10
-while (j => 1) {
+while (j >= 1) {
   console.log(j);
   j--
 }
@@ -84,7 +84,7 @@ while (j => 1) {
 // Solution:
 let result8 = 0
 let r = 0
-while (r <= 10) {
+while (r <= 100) {
   r++
   result8 += r
 }
@@ -96,12 +96,11 @@ console.log(result8);
 
 // Solution:
 let m = 1;
-while (1 <= 20) {
-  m++
+while (m <= 20) {
   if(m % 2 === 0){
     console.log(m);
-    
   }
+  m++
 }
 
 // Задача 10: Вывод чисел, делящихся на 5
@@ -111,10 +110,10 @@ while (1 <= 20) {
 
 let t = 1
 while (t <= 50) {
-  t++
   if (t % 5 === 0) {
     console.log(t);
   }
+  t++
 }
 
 
@@ -137,7 +136,7 @@ let w = 10
 do{
   console.log(w);
   w--
-} while(w => 1)
+} while(w >= 1)
 
 // Задача 13: Сумма чисел от 1 до 100
 // Описание: Напишите цикл do...while, который вычисляет сумму всех чисел от 1 до 100.
@@ -146,10 +145,10 @@ do{
 let res13 = 0
 let q = 1
 do{
-  console.log(q);
-  q++
   res13 += q
+  q++
 } while(q <= 100)
+  console.log(q);
 
 // Задача 14: Вывод четных чисел от 1 до 20
 // Описание: Напишите цикл do...while, который выводит все четные числа от 1 до 20.
