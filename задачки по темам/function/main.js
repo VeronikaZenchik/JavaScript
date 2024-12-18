@@ -53,7 +53,7 @@ const isPrime = (num) => {
   for (let i = 2; i <= Math.sqrt(num); i++) {
     if (num % i === 0) return true;
   }
-  return "Простое";
+  return true;
 }
 console.log(isPrime(7));
 
@@ -62,12 +62,14 @@ console.log(isPrime(7));
 // Напишите функцию countDigits, которая принимает число и возвращает количество цифр в этом числе.
 
 // Solution:
-
+const countDigits = (num) => {
+  return Math.abs(num).toString().length;
+};
+console.log(countDigits(12345));
 
 
 // Задача 7: Сумма элементов массива
 // Напишите функцию sumArray, которая принимает массив чисел и возвращает сумму всех элементов.
-
 
 // Solution:
 const sumArray = (arr) => {
@@ -85,8 +87,10 @@ console.log(sumArray([1, 2, 3, 4, 5]));
 
 
 // Solution:
-
-
+const findMax = (arr) => {
+  return Math.max(...arr);
+};
+console.log(findMax([10, 20, 5, 30]));
 
 
 // Задача 9: Проверка на палиндром
@@ -95,10 +99,10 @@ console.log(sumArray([1, 2, 3, 4, 5]));
 
 // Solution:
 const isPalindrome = (str) => {
-return str.includes("racecar")
-}
+  const reversedStr = str.split('').reverse().join('');
+  return str === reversedStr;
+};
 console.log(isPalindrome("racecar"));
-
 
 
 // Задача 10: Генерация чисел Фибоначчи
@@ -106,7 +110,11 @@ console.log(isPalindrome("racecar"));
 
 
 // Solution:
-
+const result = [0, 1];
+for (let i = 2; i < n; i++) {
+  result.push(result[i - 1] + result[i - 2]);
+}
+return result.slice(0, n);
 
 
 
@@ -123,16 +131,15 @@ console.log(sortArray([5, 3, 8, 1, 2]));
 // Задача 12: Подсчет гласных в строке
 // Напишите функцию countVowels, которая принимает строку и возвращает количество гласных букв в ней (a, e, i, o, u).
 
-const countVowels = (string) => {
-let res = 0
-let arr = string.split("")
-for (let i = 0; i < arr.length; i++) {
-  if (arr[i].includes("a, e, i, o, u")) {
-    arr.push()
+// Solution:
+const countVowels = (str) => {
+  const vowels = "aeiou";
+  let count = 0;
+  for (let char of str.toLowerCase()) {
+    if (vowels.includes(char)) {
+      count++;
+    }
   }
-  
-}
-return arr
-}
-console.log(countVowels("hello world"));
-
+  return count;
+};
+console.log(countVowels("hello world")); 
