@@ -113,5 +113,26 @@ console.log(isPalindrome("racecar"));
 // Задача 11: Сортировка массива
 // Напишите функцию sortArray, которая принимает массив чисел и возвращает отсортированный массив в порядке возрастания.
 
-
 // Solution:
+const sortArray = (arr) => {
+return arr.sort()
+}
+console.log(sortArray([5, 3, 8, 1, 2]));
+
+
+// Задача 12: Подсчет гласных в строке
+// Напишите функцию countVowels, которая принимает строку и возвращает количество гласных букв в ней (a, e, i, o, u).
+
+const countVowels = (string) => {
+let res = 0
+let arr = string.split("")
+for (let i = 0; i < arr.length; i++) {
+  if (arr[i].includes("a, e, i, o, u")) {
+    arr.push()
+  }
+  
+}
+return arr
+}
+console.log(countVowels("hello world"));
+
