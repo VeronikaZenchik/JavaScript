@@ -107,29 +107,47 @@ console.log(removeAllOccurrences([1, 2, 3, 4, 5], 2));
 
 // Solution:
 const addElementsIf = (arr, elements, condition) => {
+  // Фильтруем элементы из второго массива, которые удовлетворяют условию
   const filteredElements = elements.filter(condition);
-  return [...arr, ...filteredElements];
+
+  // Добавляем отфильтрованные элементы в конец первого массива
+  arr.push(...filteredElements);
+
+  // Возвращаем обновленный массив
+  return arr;
 };
 
+// Пример использования
 const arr = [1, 2, 3];
 const newElements = [4, 5, 6];
 const isEvenAdd = (el) => el % 2 === 0;
 
 console.log(addElementsIf(arr, newElements, isEven));
 
-
 // Задача 11: Удаление элементов с условием
 // Напишите функцию removeElementsIf, которая принимает массив и функцию-условие. Функция удаляет все элементы, которые удовлетворяют условию.
 
 // Solution:
-const filterArrayRemove = (arr, condition) => {
-  return arr.filter(condition)
+const removeElementsIf = (arr, condition) => {
+  const filteredArray = arr.filter((el) => !condition(el))
+  return filteredArray
 }
-const arrRemove = [1, 2, 3, 4, 5]
-const isEven = (el) => el % 2 === 0
-const removeElementsIf = filterArrayRemove(arrRemove, isEven)
+const arrRemove = [1, 2, 3, 4, 5, 6]
+const isEvenRemove = (el) => el % 2 === 0
+console.log(removeElementsIf(arrRemove, isEvenRemove))
 
-console.log(removeElementsIf);
+
+
+// const filterArrayRemove = (arr, condition) => {
+//   return arr.filter(condition)
+// }
+// const arrRemove = [1, 2, 3, 4, 5]
+// const isEven = (el) => el % 2 === 0
+// const removeElementsIf = filterArrayRemove(arrRemove, isEven)
+
+// console.log(removeElementsIf);
+
+
 
 
 // Задача 12: Замена элемента в массиве
