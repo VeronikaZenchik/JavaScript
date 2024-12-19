@@ -122,7 +122,7 @@ const arr = [1, 2, 3];
 const newElements = [4, 5, 6];
 const isEvenAdd = (el) => el % 2 === 0;
 
-console.log(addElementsIf(arr, newElements, isEven));
+console.log(addElementsIf(arr, newElements, isEvenAdd));
 
 // Задача 11: Удаление элементов с условием
 // Напишите функцию removeElementsIf, которая принимает массив и функцию-условие. Функция удаляет все элементы, которые удовлетворяют условию.
@@ -160,3 +160,63 @@ const replaceElement = (arr, index, el) => {
   return arr
 }
 console.log(replaceElement([1, 2, 3], 1, 10));
+
+
+
+
+
+// Задачи на методы JOIN и SPLIT для работы с массивами:
+
+
+// Задача 1: Преобразование массива в строку
+// Напишите функцию arrayToString, которая принимает массив и символ-разделитель, и возвращает строку, соединяя элементы массива с помощью указанного разделителя.
+
+
+// Solution:
+const arrayToString = (arr, separator) => {
+return arr.join(separator)
+}
+
+console.log(arrayToString(["apple", "banana", "cherry"], ", "));
+
+
+
+// Задача 2: Разделение строки на массив
+// Напишите функцию stringToArray, которая принимает строку и символ-разделитель, и возвращает массив, состоящий из подстрок, разделенных указанным символом.
+
+// Solution:
+const stringToArray = (str, sep) => {
+  return str.split(sep)
+  }
+  const str2 = "apple, banana, cherry"
+  console.log(stringToArray(str2, ", "));
+
+
+// Задача 3: Объединение и разделение строки
+// Напишите функцию reverseString, которая принимает строку, разделяет её на массив слов, переворачивает массив и затем объединяет его обратно в строку.
+
+// Solution:
+const reverseString = (str) => {
+let result = str.split(" ").reverse().join(" ")
+return result
+}
+const str3 = "Hello world"
+console.log(reverseString(str3));
+
+
+// Задача 4: Удаление дубликатов из строки
+// Напишите функцию removeDuplicates, которая принимает строку, разделяет её на массив слов, удаляет дубликаты и возвращает строку с уникальными словами.
+
+// Solution:
+const removeDuplicates = (str) => {
+let result = []
+let arr = str.split(" ")
+for(let i = 0; i < arr.length; i++){
+  if(!result.includes(arr[i])){
+    result.push(arr[i])
+  }
+}
+return result.join(" ")
+}
+const str4 = "apple apple banana cherry banana";
+console.log(removeDuplicates(str4));
