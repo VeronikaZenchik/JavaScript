@@ -323,11 +323,22 @@ console.log(findAllByCondition(arr8, (el) => el % 2 === 0))
 
 // Solution:
 const findMostFrequentElement = (arr) => {
-let count = 0
+  const counts = {};
+  let maxCount = 0;
+  let mostFrequentElement = null;
 
-}
-const arr9 = [1, 2, 2, 3, 3, 3, 4]
-console.log(findMostFrequentElement(arr9))
+  for (let el of arr) {
+    counts[el] = (counts[el] || 0) + 1;
+    if (counts[el] > maxCount) {
+      maxCount = counts[el];
+      mostFrequentElement = el;
+    }
+  }
+
+  return mostFrequentElement;
+};
+const arr9 = [1, 2, 2, 3, 3, 3, 4];
+console.log(findMostFrequentElement(arr9)); 
 
 
 // Задача 10: Поиск элемента по индексу 
@@ -335,15 +346,17 @@ console.log(findMostFrequentElement(arr9))
 
 // Solution:
 const getElementByIndex = (arr, index) => {
-let element = 0
-for (let i = index; i < arr.length; i++) {
-  element = arr[i]
-}
-return element
+  // Проверяем, находится ли индекс в пределах массива
+  if (index >= 0 && index < arr.length) {
+    // Если да, возвращаем элемент по указанному индексу
+    return arr[index];
+  } else {
+    // Если нет, возвращаем null
+    return null;
+  }
 }
 const arr10 = [10, 20, 30, 40]
 console.log(getElementByIndex(arr10, 2))
-
 
 
 // Задача 11: Поиск элемента в отсортированном массиве 
@@ -361,7 +374,6 @@ console.log(findInSortedArray(arr11, 3));
 
 // Solution:
 const findElementsInRange = (arr, max, min) => {
-  return arr.filter((el) => el => min && el <= max)
+  return arr.filter((el) => el >= min && el <= max);
 }
 console.log(findElementsInRange([10, 20, 30, 40, 50], 20, 40));
-
