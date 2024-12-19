@@ -106,14 +106,16 @@ console.log(removeAllOccurrences([1, 2, 3, 4, 5], 2));
 
 
 // Solution:
-const filterArrayAdd = (arr, condition) => {
-  return arr.filter(condition)
-}
-const arrAdd = [1, 2, 3, 4, 5]
-const isEvenAdd = arr.push(4, 5, 6), el => el % 2 === 0
-const addElementsIf = filterArrayAdd(arrAdd, isEvenAdd)
+const addElementsIf = (arr, elements, condition) => {
+  const filteredElements = elements.filter(condition);
+  return [...arr, ...filteredElements];
+};
 
-console.log(addElementsIf);
+const arr = [1, 2, 3];
+const newElements = [4, 5, 6];
+const isEvenAdd = (el) => el % 2 === 0;
+
+console.log(addElementsIf(arr, newElements, isEven));
 
 
 // Задача 11: Удаление элементов с условием
