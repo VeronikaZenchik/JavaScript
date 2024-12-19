@@ -59,7 +59,6 @@ console.log(removeElementByIndex([1, 2, 3, 4, 5], 2));
 // Задача 6: Добавление элемента по индексу
 // Напишите функцию addElementByIndex, которая принимает массив, элемент и индекс, и добавляет элемент по указанному индексу.
 
-
 // Solution:
 const addElementByIndex = (arr, el, index) => {
   arr.splice(index, 0, el)
@@ -82,7 +81,6 @@ console.log(removeMultipleElements([1, 2, 3, 4, 5], 1, 2));
 // Задача 8: Добавление нескольких элементов в конец массива
 // Напишите функцию addMultipleElementsToEnd, которая принимает массив и массив элементов, и добавляет все элементы из второго массива в конец первого.
 
-
 // Solution:
 const addMultipleElementsToEnd = (arr1, arr2) => {
   return [...arr1, ...arr2]
@@ -101,9 +99,9 @@ const removeAllOccurrences = (arr, el) => {
 console.log(removeAllOccurrences([1, 2, 3, 4, 5], 2));
 
 
+
 // Задача 10: Добавление элементов в массив с условием
 // Напишите функцию addElementsIf, которая принимает массив, массив элементов и функцию-условие. Функция добавляет элементы из второго массива в первый, только если они удовлетворяют условию.
-
 
 // Solution:
 const addElementsIf = (arr, elements, condition) => {
@@ -123,6 +121,7 @@ const newElements = [4, 5, 6];
 const isEvenAdd = (el) => el % 2 === 0;
 
 console.log(addElementsIf(arr, newElements, isEvenAdd));
+
 
 // Задача 11: Удаление элементов с условием
 // Напишите функцию removeElementsIf, которая принимает массив и функцию-условие. Функция удаляет все элементы, которые удовлетворяют условию.
@@ -146,7 +145,6 @@ console.log(removeElementsIf(arrRemove, isEvenRemove))
 // const removeElementsIf = filterArrayRemove(arrRemove, isEven)
 
 // console.log(removeElementsIf);
-
 
 
 
@@ -220,3 +218,150 @@ return result.join(" ")
 }
 const str4 = "apple apple banana cherry banana";
 console.log(removeDuplicates(str4));
+
+
+
+
+// Задачи на поиск элементов в массивах
+
+// Задача 1: Поиск элемента в массиве
+// Напишите функцию findElement, которая принимает массив и элемент, и возвращает true, если элемент присутствует в массиве, и false, если отсутствует.
+
+// Solution:
+const findElement = (arr, el) => {
+  return arr.includes(el)
+}
+console.log(findElement([1, 2, 3, 4, 5], 3)); 
+
+
+// Задача 2: Поиск индекса элемента
+// Напишите функцию findIndex, которая принимает массив и элемент, и возвращает индекс первого вхождения элемента в массиве. Если элемент не найден, верните -1.
+
+// Solution:
+const findIndex = (arr, el) => {
+  return arr.indexOf(el)
+}
+console.log(findIndex([1, 2, 3, 4, 5], 3)); 
+
+
+// Задача 3: Поиск максимального элемента
+// Напишите функцию findMax, которая принимает массив чисел и возвращает максимальный элемент.
+
+// Solution:
+const findMax = (arr) => {
+return Math.max(...arr)
+}
+console.log(findMax([10, 20, 5, 30]));
+
+
+// Задача 4: Поиск минимального элемента
+// Напишите функцию findMin, которая принимает массив чисел и возвращает минимальный элемент.
+
+
+// Solution:
+const findMin = (arr) => {
+  return Math.min(...arr)
+  }
+  console.log(findMin([10, 20, 5, 30]));
+
+
+// Задача 5: Поиск среднего значения
+// Напишите функцию findAverage, которая принимает массив чисел и возвращает среднее значение элементов массива.
+
+// Solution:
+const findAverage = (arr) => {
+let result = 0
+for (let i = 0; i < arr.length; i++) {
+  result += arr[i]
+}
+return result / arr.length
+  }
+  console.log(findAverage([10, 20, 30, 40]));
+
+
+  
+// Задача 6: Поиск уникальных элементов
+// Напишите функцию findUniqueElements, которая принимает массив и возвращает новый массив, содержащий только уникальные элементы.
+
+// Solution:
+const findUniqueElements = (arr) => {
+let result = []
+for (let i = 0; i < arr.length; i++) {
+  if(!result.includes(arr[i])){
+    result.push(arr[i])
+  }
+}
+return result
+}
+console.log(findUniqueElements([1, 2, 2, 3, 4, 4, 5]));
+
+
+// Задача 7: Поиск элемента с условием
+// Напишите функцию findElementByCondition, которая принимает массив и функцию-условие, и возвращает первый элемент, удовлетворяющий условию. Если такого элемента нет, верните null.
+
+// Solution:
+const findElementByCondition = (arr, condition) => {
+  return arr.find(condition)
+}
+const arr7 = [1, 2, 3, 4, 5]
+console.log(findElementByCondition(arr7, (el) => el > 3))
+
+
+// Задача 8: Поиск всех элементов с условием
+// Напишите функцию findAllByCondition, которая принимает массив и функцию-условие, и возвращает массив всех элементов, удовлетворяющих условию.
+
+// Solution:
+const findAllByCondition = (arr, condition) => {
+  return arr.filter(condition)
+}
+const arr8 = [1, 2, 3, 4, 5, 6]
+console.log(findAllByCondition(arr8, (el) => el % 2 === 0))
+
+
+// Задача 9: Поиск элемента с наибольшим количеством вхождений ------
+// Напишите функцию findMostFrequentElement, которая принимает массив и возвращает элемент, который встречается в массиве чаще всего.
+
+// Solution:
+const findMostFrequentElement = (arr) => {
+let count = 0
+
+}
+const arr9 = [1, 2, 2, 3, 3, 3, 4]
+console.log(findMostFrequentElement(arr9))
+
+
+// Задача 10: Поиск элемента по индексу 
+// Напишите функцию getElementByIndex, которая принимает массив и индекс, и возвращает элемент по указанному индексу. Если индекс выходит за пределы массива, верните null.
+
+// Solution:
+const getElementByIndex = (arr, index) => {
+let element = 0
+for (let i = index; i < arr.length; i++) {
+  element = arr[i]
+}
+return element
+}
+const arr10 = [10, 20, 30, 40]
+console.log(getElementByIndex(arr10, 2))
+
+
+
+// Задача 11: Поиск элемента в отсортированном массиве 
+// Напишите функцию findInSortedArray, которая принимает отсортированный массив и элемент, и возвращает true, если элемент присутствует в массиве, и false, если отсутствует. Используйте алгоритм бинарного поиска.
+
+// Solution:
+const findInSortedArray = (arr, el) => {
+return arr.some((els) => els === el)
+}
+const arr11 = [1, 2, 3, 4, 5];
+console.log(findInSortedArray(arr11, 3));
+
+// Задача 12: Поиск элементов в диапазоне
+// Напишите функцию findElementsInRange, которая принимает массив чисел, минимальное и максимальное значение, и возвращает массив элементов, которые находятся в указанном диапазоне (включительно).
+
+// Solution:
+const findElementsInRange = (arr, max, min) => {
+  return arr.filter((el) => el => min && el <= max)
+}
+console.log(findElementsInRange([10, 20, 30, 40, 50], 20, 40));
+
