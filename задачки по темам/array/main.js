@@ -502,3 +502,75 @@ const removeAfterIndex = (arr, index) => {
 }
 const arr30 = [1, 2, 3, 4, 5];
 console.log(removeBeforeIndex(arr30, 2));
+
+
+
+// Задачи на методы REVERSE и SORT для работы с массивами:
+
+// Задача 1: Перевернуть массив
+// Напишите функцию reverseArray, которая принимает массив и возвращает новый массив, перевернутый в обратном порядке.
+
+// Solution:
+const reverseArray  = (arr) => {
+  return arr.reverse()
+}
+const arr31 = [1, 2, 3, 4, 5];
+console.log(reverseArray(arr31));
+
+
+// Задача 2: Сортировка чисел по возрастанию
+// Напишите функцию sortAscending, которая принимает массив чисел и возвращает новый массив, отсортированный по возрастанию.
+
+// Solution:
+const sortAscending  = (arr) => {
+  return arr.sort((a, b) => a - b)
+}
+const arr32 = [5, 3, 8, 1, 2];
+console.log(sortAscending(arr32))
+
+
+// Задача 3: Сортировка чисел по убыванию
+// Напишите функцию sortDescending, которая принимает массив чисел и возвращает новый массив, отсортированный по убыванию.
+
+// Solution:
+const sortDescending  = (arr) => {
+  return arr.sort((a, b) => b - a)
+}
+const arr34 = [5, 3, 8, 1, 2];
+console.log(sortDescending(arr34))
+
+
+// Задача 4: Сортировка строк по алфавиту
+// Напишите функцию sortStrings, которая принимает массив строк и возвращает новый массив, отсортированный по алфавиту.
+
+// Solution:
+const sortStrings  = (arr) => {
+  return arr.sort()
+}
+const arr35 = ["banana", "apple", "cherry", "date"];
+console.log(sortStrings(arr35));
+
+
+// Задача 5: Сортировка массива объектов
+// Напишите функцию sortObjects, которая принимает массив объектов и ключ, по которому нужно сортировать объекты. Функция должна возвращать новый массив, отсортированный по указанному ключу.
+
+// Solution:
+const sortObjects  = (arr, key) => {
+  return  arr.sort((a, b) => a[key] - b[key])
+}
+const arr36 = [
+  { name: "John", age: 25 },
+  { name: "Jane", age: 20 },
+  { name: "Alice", age: 30 }
+];
+console.log(sortObjects(arr36, "age"));
+
+
+// Задача 6: Перевернуть строку
+// Напишите функцию reverseString, которая принимает строку и возвращает новую строку, перевернутую в обратном порядке.
+
+// Solution:
+const reverseString1 = (str) => {
+return str.split('').reverse().join('')
+}
+console.log(reverseString1("hello"));
