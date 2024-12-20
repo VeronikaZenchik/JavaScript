@@ -398,7 +398,7 @@ console.log(removeElements([1, 2, 3, 4, 5], 1, 3));
 
 // Solution:
 const insertElements = (arr, index, elements) => {
-  arr.splice(index, 0, elements)
+  arr.splice(index, 0, ...elements)
   return arr
 }
 const arr23 = [1, 2, 3, 4, 5];
@@ -411,7 +411,7 @@ console.log(insertElements(arr23, 2, newElementsArr));
 
 // Solution:
 const replaceElements = (arr, index, el) => {
-  arr.splice(index, el.length, el)
+  arr.splice(index, el.length, ...el)
   return arr
 }
 const arr33 = [1, 2, 3, 4, 5];
@@ -433,39 +433,35 @@ console.log(copyPartOfArray([1, 2, 3, 4, 5], 1, 4));
 
 // Solution:
 const removeAndInsert = (arr, index, count, elements) => {
-arr.splice(index, count, elements)
+arr.splice(index, count, ...elements)
 return arr
 }
 const arr25 = [1, 2, 3, 4, 5];
 console.log(removeAndInsert(arr25, 1, 2, [10, 20]));
 
 
-// Задача 6: Разделение массива на две части------
+// Задача 6: Разделение массива на две части
 // Напишите функцию splitArray, которая принимает массив и индекс (index), и возвращает два новых массива: первый содержит элементы до указанного индекса, а второй — элементы после указанного индекса (включая элемент с указанным индексом).
 
 // Solution:
 const splitArray = (arr, index) => {
-let result = []
-let first = arr.splice(index)
-let second = arr.slice(index)
-result = arr + second
-return result
+  const firstPart = arr.slice(0, index);
+  const secondPart = arr.slice(index);
+  return [firstPart, secondPart];
 }
 const arr26 = [1, 2, 3, 4, 5];
 console.log(splitArray(arr26, 2))
 
 
-// Задача 7: Удаление последнего элемента и добавление в начало------
+// Задача 7: Удаление последнего элемента и добавление в начало
 // Напишите функцию moveLastToFirst, которая принимает массив, удаляет последний элемент и добавляет его в начало массива.
 
 // Solution:
 const moveLastToFirst = (arr) => {
   // Удаляем последний элемент с помощью splice
   const lastElement = arr.splice(-1, 1)[0];
-
   // Добавляем удаленный элемент в начало массива с помощью unshift
   arr.unshift(lastElement);
-
   // Возвращаем измененный массив
   return arr;
 }
@@ -473,17 +469,18 @@ const arr27 = [1, 2, 3, 4, 5];
 console.log(moveLastToFirst(arr27));
 
 
-// Задача 8: Удаление первого элемента и добавление в конец----
+// Задача 8: Удаление первого элемента и добавление в конец
 // Напишите функцию moveFirstToLast, которая принимает массив, удаляет первый элемент и добавляет его в конец массива.
 
 // Solution:
 const moveFirstToLast = (arr) => {
-  const fitsrEL = arr.splice(1,1)[0]
+  const fitsrEL = arr.shift()
   arr.push(fitsrEL)
   return arr
 }
 const arr28 = [1, 2, 3, 4, 5];
-console.log(moveFirstToLast(arr28)); 
+console.log(moveFirstToLast(arr28));
+
 
 // Задача 9: Удаление всех элементов до указанного индекса
 // Напишите функцию removeBeforeIndex, которая принимает массив и индекс (index), и удаляет все элементы до указанного индекса (не включая элемент с указанным индексом).
