@@ -574,3 +574,40 @@ const reverseString1 = (str) => {
 return str.split('').reverse().join('')
 }
 console.log(reverseString1("hello"));
+
+
+
+// Задачи на методы REDUCE для работы с массивами:
+
+// Задача 1: Сумма элементов массива
+// Напишите функцию sumArray, которая принимает массив чисел и возвращает сумму всех элементов.
+
+// Solution:
+const sumArrayReduce = (arr) => {
+return arr.reduce((accumulator, currentValue) => {
+  return accumulator + currentValue
+}, 0)
+}
+console.log(sumArrayReduce([1, 2, 3, 4, 5]));
+
+
+// Задача 2: Произведение элементов массива
+// Напишите функцию multiplyArray, которая принимает массив чисел и возвращает произведение всех элементов.
+
+// Solution:
+const multiplyArrayReduce = (arr) => {
+  return arr.reduce((accumulator, currentValue) => {
+    return accumulator * currentValue
+  }, 0)
+}
+console.log(multiplyArrayReduce([1, 2, 3, 4, 5]));
+
+
+// Задача 3: Поиск максимального элемента
+// Напишите функцию findMax, которая принимает массив чисел и возвращает максимальный элемент.
+
+// Solution:
+const findMaxReduce = (arr) => {
+  return arr.reduce((acc, curr) => (curr > acc ? curr : acc), arr[0]);
+}
+console.log(findMaxReduce([10, 20, 5, 30]));
