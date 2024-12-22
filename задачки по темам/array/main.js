@@ -1008,4 +1008,4 @@ const filterGreaterThan = (arr, threshold) => {
 const filterBySubstring = (arr, substring) => {
   return arr.filter((str) => str.includes(substring))
   }
-  console.log(filterBySubstring(['apple', 'banana', 'cherry', 'grape'], 'an'));
+  console.log(filterBySubstring(['apple', 'banana', 'cherry', 'grape'], 'ap'));
