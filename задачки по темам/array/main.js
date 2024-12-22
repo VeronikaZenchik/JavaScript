@@ -387,7 +387,7 @@ console.log(findElementsInRange([10, 20, 30, 40, 50], 20, 40));
 
 // Solution:
 const removeElements = (arr, indexOne, indexTwo) => {
-arr.splice(indexOne, indexTwo- indexOne)
+arr.splice(indexOne, indexTwo - indexOne)
 return arr
 }
 console.log(removeElements([1, 2, 3, 4, 5], 1, 3));
@@ -804,7 +804,10 @@ const firstLetters = (arr) => {
 console.log(firstLetters(['apple', 'banana', 'cherry']));
 
 
+
+
 // Задачи на метод MAP для работы с массивами:
+
 
 // Задача 1: Удвоение чисел
 // Напишите функцию, которая принимает массив чисел и возвращает новый массив, где каждый элемент удвоен.
@@ -936,3 +939,73 @@ const users10 = [
   { name: 'Charlie', age: 35 }
 ];
 console.log(increaseAge(users10))
+
+
+
+// Задачи на метод FILTER для работы с массивами:
+
+
+// Задача 1: Фильтрация четных чисел
+// Напишите функцию, которая принимает массив чисел и возвращает новый массив, содержащий только четные числа.
+
+// Solution:
+const filterEvenNumbers = (arr) => {
+  return arr.filter((num) => num % 2 === 0)
+  }
+  console.log(filterEvenNumbers([1, 2, 3, 4, 5]));
+
+
+// Задача 2: Фильтрация строк по длине
+// Напишите функцию, которая принимает массив строк и возвращает новый массив, содержащий только строки, длина которых больше 5 символов.
+
+// Solution:
+const filterLongStrings = (arr) => {
+  return arr.filter((el) => el.length > 5)
+  }
+  console.log(filterLongStrings(['apple', 'banana', 'cherry', 'kiwi']));
+
+
+// Задача 3: Фильтрация положительных чисел
+// Напишите функцию, которая принимает массив чисел и возвращает новый массив, содержащий только положительные числа.
+
+// Solution:
+const filterPositiveNumbers = (arr) => {
+  return arr.filter((num) => num > 0)
+  }
+  console.log(filterPositiveNumbers([-2, -1, 0, 1, 2, 3]));
+
+
+// Задача 4: Фильтрация объектов по возрасту
+// Напишите функцию, которая принимает массив объектов с полями name и age и возвращает новый массив, содержащий только объекты, у которых возраст больше 30.
+
+// Solution:
+const filterByAge = (arr) => {
+  return arr.filter((num) => num.age > 30)
+  }
+  const users4 = [
+    { name: 'Alice', age: 25 },
+    { name: 'Bob', age: 35 },
+    { name: 'Charlie', age: 40 }
+  ];
+  
+console.log(filterByAge(users4));
+
+
+// Задача 5: Фильтрация чисел больше заданного значения
+// Напишите функцию, которая принимает массив чисел и число threshold и возвращает новый массив, содержащий только числа, которые больше threshold.
+
+// Solution:
+const filterGreaterThan = (arr, threshold) => {
+  return arr.filter((num) => num > threshold)
+  }
+  console.log(filterGreaterThan([1, 2, 3, 4, 5], 3));
+
+
+// Задача 6: Фильтрация строк, содержащих определенную подстроку
+// Напишите функцию, которая принимает массив строк и строку substring и возвращает новый массив, содержащий только строки, которые содержат substring.
+
+// Solution:
+const filterBySubstring = (arr, substring) => {
+  return arr.filter((str) => str.includes(substring))
+  }
+  console.log(filterBySubstring(['apple', 'banana', 'cherry', 'grape'], 'an'));
