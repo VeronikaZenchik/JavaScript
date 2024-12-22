@@ -811,9 +811,7 @@ console.log(firstLetters(['apple', 'banana', 'cherry']));
 
 // Solution:
 const doubleNumbers = (arr) => {
-  return arr.map((num) => {
-    return num * 2
-  })
+  return arr.map((num) => num * 2)
 }
 console.log(doubleNumbers([1, 2, 3, 4, 5]));
 
@@ -890,7 +888,7 @@ console.log(getNames(users));
 // Solution:
 const createListItems = (arr) => {
   return arr.map((el) => {
-    return `<li> ${li} </li>`
+    return `<li> ${el} </li>`
   })
 }
 const fruits = ['apple', 'banana', 'cherry'];
@@ -901,9 +899,7 @@ console.log(createListItems(fruits));
 
 // Solution:
 const convertToFahrenheit = (arr) => {
-  return arr.map((el) => {
-    return el * 1.8 + 32
-  })
+  return arr.map((el) =>  el * 1.8 + 32)
 }
 console.log(convertToFahrenheit([0, 10, 20, 30]));
 
@@ -928,10 +924,11 @@ console.log(evenOrOdd([1, 2, 3, 4, 5]));
 
 // Solution:
 const increaseAge = (arr) => {
-  return arr.map((el) => {
-    return el.age + 1
-  })
-}
+  return arr.map((el) => ({
+    ...el, // Копируем все свойства объекта
+    age: el.age + 1 // Увеличиваем возраст на 1
+  }));
+};
 
 const users10 = [
   { name: 'Alice', age: 25 },
