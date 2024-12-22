@@ -611,3 +611,193 @@ const findMaxReduce = (arr) => {
   return arr.reduce((acc, curr) => (curr > acc ? curr : acc), arr[0]);
 }
 console.log(findMaxReduce([10, 20, 5, 30]));
+
+
+
+
+// Задачи на метод FOREACH для работы с массивами:
+
+
+// Задача 1: Вывод элементов массива
+// Напишите функцию printArray, которая принимает массив и выводит каждый элемент в консоль.
+
+// Solution:
+const printArray = (arr) => {
+arr.forEach((num) => {console.log(num);
+})
+}
+printArray([1, 2, 3, 4, 5]);
+
+
+// Задача 2: Подсчет суммы элементов массива
+// Напишите функцию sumArray, которая принимает массив чисел и возвращает сумму всех элементов.
+
+// Solution:
+const sumArray = (arr) => {
+  arr.forEach((sum) => {
+    const result = sum + sum
+console.log(result);
+
+  })
+}
+sumArray([1, 2, 3, 4, 5, 6])
+
+
+// Задача 3: Подсчет количества элементов
+// Напишите функцию countElements, которая принимает массив и возвращает объект, где ключи — это уникальные элементы массива, а значения — количество их вхождений.
+
+// Solution:
+const countElements = (arr) => {
+  const result = {};
+  arr.forEach((element) => {
+    result[element] = (result[element] || 0) + 1;
+  });
+  return result;
+};
+
+const arr333 = ["apple", "banana", "apple", "cherry", "banana"];
+console.log(countElements(arr333));
+
+
+// Задача 4: Увеличение элементов массива
+// Напишите функцию increaseArray, которая принимает массив чисел и число increment, и увеличивает каждый элемент массива на increment.
+
+// Solution:
+const increaseArray = (arr, increment) => {
+  arr.forEach((element, index) => {
+    arr[index] = element + increment;
+  });
+};
+
+const arr3336 = [1, 2, 3, 4, 5];
+increaseArray(arr3336, 2);
+console.log(arr3336);
+
+
+// Задача 5: Подсчет количества элементов, удовлетворяющих условию
+// Напишите функцию, которая принимает массив чисел и возвращает количество элементов, которые больше 10.
+
+// Solution:
+const countGreaterThanTen = (arr) => {
+  let count = 0; // Объявляем переменную для подсчета
+
+  arr.forEach((el) => {
+    if (el > 10) {
+      count++; // Увеличиваем счетчик, если элемент больше 10
+    }
+  });
+
+  return count; // Возвращаем результат после завершения цикла
+};
+
+console.log(countGreaterThanTen([1, 6, 89, 78, 10]));
+
+
+// Задача 4: Преобразование массива строк в массив длин строк
+// Напишите функцию, которая принимает массив строк и возвращает новый массив, содержащий длины каждой строки.
+
+// Solution:
+const stringLengths = (arr) => {
+arr.forEach((el, index, arr) => {
+  arr[index] = el.length
+  console.log(arr);
+  
+})
+}
+stringLengths(['apple', 'banana', 'cherry']);
+
+
+// Задача 5: Проверка, все ли элементы массива положительные---
+// Напишите функцию, которая принимает массив чисел и возвращает true, если все элементы массива положительные, и false в противном случае.
+
+// Solution:
+const allPositive = (arr) => {
+  arr.forEach((el) => {
+    if(el >= 0){
+      return true
+    }
+    return false
+  })
+}
+allPositive([1, 2, 3, 4, 5]);
+
+
+// Задача 6: Подсчет количества четных чисел
+// Напишите функцию, которая принимает массив чисел и возвращает количество четных чисел в массиве.
+
+// Solution:
+const countEvenNumbers = (arr) => {
+  let count = 0
+arr.forEach((el) => {
+  if(el % 2 === 0) {
+    count++
+  }
+})
+return count
+}
+console.log(countEvenNumbers([1, 2, 3, 4, 5, 6]))
+
+
+// Задача 7: Преобразование массива чисел в массив строк
+// Напишите функцию, которая принимает массив чисел и возвращает новый массив, содержащий строковые представления каждого числа.
+
+// Solution:
+const numbersToString = (arr) => {
+  const result = []; 
+
+  arr.forEach((el) => {
+    result.push(el.toString()); // Преобразуем каждое число в строку и добавляем в массив result
+  });
+
+  return result; 
+}
+numbersToString([1, 2, 3, 4, 5]);
+
+
+// Задача 8: Подсчет суммы квадратов элементов массива
+// Напишите функцию, которая принимает массив чисел и возвращает сумму квадратов всех элементов массива.
+
+// Solution:
+const sumOfSquares = (arr) => {
+  let sum = 0
+arr.forEach((el, index, arr) => {
+  // arr[index] = el ** 2
+  // sum += arr[index]
+  sum += el ** 2
+})
+return sum
+}
+
+console.log(sumOfSquares([1, 2, 3, 4, 5]));
+
+
+// Задача 9: Проверка, есть ли в массиве отрицательные числа-----
+// Напишите функцию, которая принимает массив чисел и возвращает true, если в массиве есть хотя бы одно отрицательное число, и false в противном случае.
+
+// Solution:
+const hasNegative = (arr) => {
+  arr.forEach((el) => {
+    if(el >= 0){
+      return true
+    }
+    return false
+  })
+}
+hasNegative([1, 2, 3, 4, 5]);
+
+
+// Задача 10: Преобразование массива строк в массив первых букв
+// Напишите функцию, которая принимает массив строк и возвращает новый массив, содержащий первую букву каждой строки
+
+// Solution:
+const firstLetters = (arr) => {
+  let res = []
+  arr.forEach((el) = {
+    res.push(el[0])
+  })
+  return res
+}
+
+console.log(firstLetters(['apple', 'banana', 'cherry']));
+
+
