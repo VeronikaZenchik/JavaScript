@@ -802,3 +802,140 @@ const firstLetters = (arr) => {
 }
 
 console.log(firstLetters(['apple', 'banana', 'cherry']));
+
+
+// Задачи на метод MAP для работы с массивами:
+
+// Задача 1: Удвоение чисел
+// Напишите функцию, которая принимает массив чисел и возвращает новый массив, где каждый элемент удвоен.
+
+// Solution:
+const doubleNumbers = (arr) => {
+  return arr.map((num) => {
+    return num * 2
+  })
+}
+console.log(doubleNumbers([1, 2, 3, 4, 5]));
+
+
+// Задача 2: Преобразование строк в верхний регистр
+// Напишите функцию, которая принимает массив строк и возвращает новый массив, где каждая строка преобразована в верхний регистр.
+
+// Solution:
+const uppercaseStrings = (arr) => {
+  return arr.map((el) => {
+    return el.toUpperCase()
+  })
+}
+console.log(uppercaseStrings(['apple', 'banana', 'cherry']));
+
+
+// Задача 3: Преобразование чисел в строки
+// Напишите функцию, которая принимает массив чисел и возвращает новый массив, где каждое число преобразовано в строку.
+
+// Solution:
+const numbersToStringMap = (arr) => {
+  return arr.map((el) => {
+    return el.toString()
+  })
+}
+console.log(numbersToStringMap([1, 2, 3, 4, 5]));
+
+
+// Задача 4: Получение квадратов чисел
+// Напишите функцию, которая принимает массив чисел и возвращает новый массив, где каждый элемент — это квадрат соответствующего числа.
+
+// Solution:
+const squareNumbers = (arr) => {
+  return arr.map((el) => {
+    return el ** 2
+  })
+}
+console.log(squareNumbers([1, 2, 3, 4, 5]));
+
+
+// Задача 5: Получение длин строк
+// Напишите функцию, которая принимает массив строк и возвращает новый массив, где каждый элемент — это длина соответствующей строки.
+
+// Solution:
+const stringLengthsMap = (arr) => {
+  return arr.map((el) => {
+    return el.length
+  })
+}
+console.log(stringLengthsMap(['apple', 'banana', 'cherry']));
+
+
+// Задача 6: Преобразование объектов
+// Напишите функцию, которая принимает массив объектов и возвращает новый массив, где каждый объект содержит только одно свойство — имя.
+
+// Solution:
+const getNames = (arr) => {
+  return arr.map((el) => {
+    return el.name
+  })
+}
+
+const users = [
+  { name: 'Alice', age: 25 },
+  { name: 'Bob', age: 30 },
+  { name: 'Charlie', age: 35 }
+];
+console.log(getNames(users)); 
+
+
+// Задача 7: Преобразование массива в HTML-список
+// Напишите функцию, которая принимает массив строк и возвращает новый массив, где каждая строка обернута в тег <li>.
+
+// Solution:
+const createListItems = (arr) => {
+  return arr.map((el) => {
+    return `<li> ${li} </li>`
+  })
+}
+const fruits = ['apple', 'banana', 'cherry'];
+console.log(createListItems(fruits));
+
+// Задача 8: Преобразование температуры
+// Напишите функцию, которая принимает массив температур в градусах Цельсия и возвращает новый массив, где каждая температура преобразована в градусы Фаренгейта по формуле: F = C * 1.8 + 32.
+
+// Solution:
+const convertToFahrenheit = (arr) => {
+  return arr.map((el) => {
+    return el * 1.8 + 32
+  })
+}
+console.log(convertToFahrenheit([0, 10, 20, 30]));
+
+
+// Задача 9: Фильтрация четных чисел
+// Напишите функцию, которая принимает массив чисел и возвращает новый массив, где каждый элемент — это строка "четное" или "нечетное" в зависимости от значения числа.
+
+// Solution:
+const evenOrOdd = (arr) => {
+return arr.map((el) => {
+  if (el % 2 === 0 ) {
+    return "четное"
+  }
+  return "нечетное"
+})
+}
+console.log(evenOrOdd([1, 2, 3, 4, 5]));
+
+
+// Задача 10: Увеличение возраста
+// Напишите функцию, которая принимает массив объектов с полями name и age и возвращает новый массив, где возраст каждого человека увеличен на 1.
+
+// Solution:
+const increaseAge = (arr) => {
+  return arr.map((el) => {
+    return el.age + 1
+  })
+}
+
+const users10 = [
+  { name: 'Alice', age: 25 },
+  { name: 'Bob', age: 30 },
+  { name: 'Charlie', age: 35 }
+];
+console.log(increaseAge(users10))
