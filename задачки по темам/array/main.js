@@ -698,13 +698,14 @@ console.log(countGreaterThanTen([1, 6, 89, 78, 10]));
 
 // Solution:
 const stringLengths = (arr) => {
-arr.forEach((el, index, arr) => {
-  arr[index] = el.length
-  console.log(arr);
+  let result = []
+arr.forEach((el) => {
+  result.push(el.length);
   
 })
+return result
 }
-stringLengths(['apple', 'banana', 'cherry']);
+console.log(stringLengths(['apple', 'banana', 'cherry']));
 
 
 // Задача 5: Проверка, все ли элементы массива положительные---
@@ -712,12 +713,13 @@ stringLengths(['apple', 'banana', 'cherry']);
 
 // Solution:
 const allPositive = (arr) => {
+  let isPositive = true; // Инициализируем флаг
   arr.forEach((el) => {
-    if(el >= 0){
-      return true
+    if(el <= 0){
+      isPositive = false;  // Если элемент не положительный, меняем флаг
     }
-    return false
   })
+  return isPositive
 }
 allPositive([1, 2, 3, 4, 5]);
 
@@ -776,12 +778,13 @@ console.log(sumOfSquares([1, 2, 3, 4, 5]));
 
 // Solution:
 const hasNegative = (arr) => {
+  let hasNeg = false
   arr.forEach((el) => {
-    if(el >= 0){
-      return true
+    if(el < 0){
+      hasNeg =  true
     }
-    return false
   })
+  return hasNeg
 }
 hasNegative([1, 2, 3, 4, 5]);
 
@@ -792,12 +795,10 @@ hasNegative([1, 2, 3, 4, 5]);
 // Solution:
 const firstLetters = (arr) => {
   let res = []
-  arr.forEach((el) = {
+  arr.forEach((el) => {
     res.push(el[0])
   })
   return res
 }
 
 console.log(firstLetters(['apple', 'banana', 'cherry']));
-
-
