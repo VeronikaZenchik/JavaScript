@@ -181,7 +181,7 @@ console.log(objectValuesToArray(obj11));
 
 // Solution:
 const isEmptyObject = (obj) => {
-  // return obj.hasOwnProperty(key)
+  return Object.keys(obj).length === 0;
 }
 
 const obj22 = {};
@@ -208,7 +208,11 @@ console.log(obj);
 
 // Solution:
 const clearObject = (obj) => {
-  return delete obj
+  for (let key in obj) {
+    if (obj.hasOwnProperty(key)) {
+      delete obj[key];
+    }
+  }
 }
 
 const obj44 = { a: 1, b: 2, c: 3 };
@@ -226,16 +230,3 @@ const arrayToObject = (arr) => {
 
 const arr5 = [['a', 1], ['b', 2], ['c', 3]];
 console.log(arrayToObject(arr5));
-
-// Задача 6: Слияние нескольких объектов
-// Напишите функцию, которая принимает массив объектов и возвращает новый объект, содержащий все свойства из переданных объектов. Если свойства с одинаковыми ключами встречаются в нескольких объектах, используйте значение из последнего объекта.
-
-// Solution:
-const mergeMultipleObjects = (obj1, obj2, obj3) => {
-  return {...obj1, ...obj2, ...obj3}
-}
-
-const obj166 = { a: 1, b: 2 };
-const obj266 = { b: 3, c: 4 };
-const obj355 = { c: 5, d: 6 };
-console.log(mergeMultipleObjects([obj166, obj166, obj355]));
