@@ -11,14 +11,16 @@ const obj1 = { a: 1, b: 2, c: 3 };
 console.log(countProperties(obj1));
 
 
-// Задача 2: Сумма значений свойств объекта---------
+// Задача 2: Сумма значений свойств объекта
 // Напишите функцию, которая принимает объект, где значения свойств — числа, и возвращает сумму всех значений.
 
 // Solution:
 const sumValues = (obj) => {
-return Object.values(obj).map((el) => {
-  el.key 
-})
+  let sumValues = 0
+  Object.values(obj).forEach((value) => {
+    sumValues += value
+  })
+  return sumValues
 }
 const obj2 = { a: 10, b: 20, c: 30 };
 console.log(sumValues(obj2))
@@ -93,8 +95,17 @@ console.log(invertObject(obj7));
 // Напишите функцию, которая принимает массив объектов и возвращает объект, где ключи — это уникальные значения из массива, а значения — количество их вхождений.
 
 // Solution:
-const countElements = (obj) => {
-
+const countElements = (arr) => {
+  const result = {}; // Создаем пустой объект для хранения результата
+  for (let i = 0; i < arr.length; i++) {
+    const key = arr[i].name; // Получаем ключ (например, имя)
+    if (result[key]) {
+      result[key]++; // Увеличиваем счетчик, если ключ уже существует
+    } else {
+      result[key] = 1; // Инициализируем счетчик, если ключ новый
+    }
+  }
+  return result;
   }
 
   const arr = [
@@ -125,8 +136,25 @@ console.log(removeProperty(obj9, 'b'));
 
 // Solution:
 const areObjectsEqual = (obj) => {
+  // Проверяем, что количество свойств одинаково
+  if (Object.keys(obj1).length !== Object.keys(obj2).length) {
+    return false;
+  }
 
+  // Перебираем все ключи первого объекта
+  for (let key in obj1) {
+    if (obj1.hasOwnProperty(key)) {
+      // Проверяем, что второй объект содержит тот же ключ и значение
+      if (!obj2.hasOwnProperty(key) || obj1[key] !== obj2[key]) {
+        return false;
+      }
+    }
+  }
+
+  return true;
 }
+
+// return JSON.stringify(obj1) === JSON.stringify(obj2);
 
 const obj110 = { a: 1, b: 2 };
 const obj210 = { a: 1, b: 2 };
