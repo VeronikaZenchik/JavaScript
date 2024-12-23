@@ -91,7 +91,7 @@ const obj7 = { a: 1, b: 2, c: 3 };
 console.log(invertObject(obj7));
 
 
-// Задача 8: Подсчет количества элементов в массиве объектов-----
+// Задача 8: Подсчет количества элементов в массиве объектов
 // Напишите функцию, которая принимает массив объектов и возвращает объект, где ключи — это уникальные значения из массива, а значения — количество их вхождений.
 
 // Solution:
@@ -135,7 +135,7 @@ console.log(removeProperty(obj9, 'b'));
 // Напишите функцию, которая принимает два объекта и возвращает true, если они содержат одинаковые ключи и значения, и false в противном случае.
 
 // Solution:
-const areObjectsEqual = (obj) => {
+const areObjectsEqual = (obj1, obj2) => {
   // Проверяем, что количество свойств одинаково
   if (Object.keys(obj1).length !== Object.keys(obj2).length) {
     return false;
@@ -161,3 +161,81 @@ const obj210 = { a: 1, b: 2 };
 const obj310 = { a: 1, b: 3 };
 console.log(areObjectsEqual(obj110, obj210)); // Вывод: true
 console.log(areObjectsEqual(obj110, obj310)); // Вывод: false
+
+
+
+// Задача 1: Получение массива значений объекта
+// Напишите функцию, которая принимает объект и возвращает массив, содержащий все его значения.
+
+// Solution:
+const objectValuesToArray = (obj) => {
+  return Object.values(obj)
+}
+
+const obj11 = { a: 1, b: 2, c: 3 };
+console.log(objectValuesToArray(obj11));
+
+
+// Задача 2: Проверка, является ли объект пустым---
+// Напишите функцию, которая принимает объект и возвращает true, если у него нет свойств, и false в противном случае.
+
+// Solution:
+const isEmptyObject = (obj) => {
+  // return obj.hasOwnProperty(key)
+}
+
+const obj22 = {};
+const obj222 = { a: 1 };
+console.log(isEmptyObject(obj22));
+console.log(isEmptyObject(obj222))
+
+
+// Задача 3: Добавление свойства в объект
+// Напишите функцию, которая принимает объект, строку (имя свойства) и значение, и добавляет это свойство в объект.
+
+// Solution:
+const addProperty = (obj, str, value) => {
+  return obj[str] = value
+}
+
+const obj = { a: 1 };
+addProperty(obj, 'b', 2);
+console.log(obj); 
+
+
+// Задача 4: Удаление всех свойств объекта
+// Напишите функцию, которая принимает объект и удаляет все его свойства.
+
+// Solution:
+const clearObject = (obj) => {
+  return delete obj
+}
+
+const obj44 = { a: 1, b: 2, c: 3 };
+clearObject(obj44);
+console.log(obj44);
+
+
+// Задача 5: Получение объекта из массива пар ключ-значение
+// Напишите функцию, которая принимает массив пар ключ-значение (массивов из двух элементов) и возвращает объект, созданный из этих пар.
+
+// Solution:
+const arrayToObject = (arr) => {
+  return Object.fromEntries(arr)
+}
+
+const arr5 = [['a', 1], ['b', 2], ['c', 3]];
+console.log(arrayToObject(arr5));
+
+// Задача 6: Слияние нескольких объектов
+// Напишите функцию, которая принимает массив объектов и возвращает новый объект, содержащий все свойства из переданных объектов. Если свойства с одинаковыми ключами встречаются в нескольких объектах, используйте значение из последнего объекта.
+
+// Solution:
+const mergeMultipleObjects = (obj1, obj2, obj3) => {
+  return {...obj1, ...obj2, ...obj3}
+}
+
+const obj166 = { a: 1, b: 2 };
+const obj266 = { b: 3, c: 4 };
+const obj355 = { c: 5, d: 6 };
+console.log(mergeMultipleObjects([obj166, obj166, obj355]));
