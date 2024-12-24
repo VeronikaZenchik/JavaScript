@@ -6,11 +6,11 @@
 */
 
 // your code
-let factorial = 0
-let numFac = 0
+let factorial = 1
+let numFac = 1
 while (numFac <= 10) {
+  factorial = factorial * numFac
   numFac++
-  factorial = numFac * numFac
 }
 console.log(factorial);
 

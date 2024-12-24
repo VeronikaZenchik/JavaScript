@@ -5,8 +5,8 @@
 let sum = 0
 let num = 0
 while (num <= 20){
+  sum += num
 num++
-sum += num
 }
 console.log(sum) 
 

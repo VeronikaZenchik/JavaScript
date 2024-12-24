@@ -7,3 +7,29 @@
 const score = 70 // тестовое значение, можно изменять
 let grade
 // your code
+switch (true) {
+  case score >= 90 && score <= 100:
+    grade = "A"
+    break;
+  case score >= 80 && score <= 89:
+    grade = "B"
+    break;
+  case score >= 70 && score <= 79:
+    grade = "C"
+    break;
+  case score >= 50 && score <= 69:
+    grade = "D"
+    break;
+  case score >= 0 && score <= 49:
+    grade = "F"
+    break;
+
+  default:
+        grade = "Не корректное значение"
+    break;
+}
+
+console.log("Балл " + score);
+console.log("Оценка " + grade);
+
+

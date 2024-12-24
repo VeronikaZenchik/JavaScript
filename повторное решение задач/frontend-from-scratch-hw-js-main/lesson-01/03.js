@@ -8,10 +8,10 @@
 let result = 0
 let numEven = 1
 while (numEven <= 20) {
-  numEven++
   if (numEven % 2 !== 0) {
     result += numEven
   }
+  numEven++
 }
 console.log(result);
 
