@@ -15,5 +15,13 @@ const game = {
     gold: 250,
     lumber: 100,
   },
-  addResource() {}
+  addResource(resource, amount) {
+    if (resource in this.resources) {  //Условие if (resource in this.resources) проверяет, содержится ли resource в объекте game.resources.
+      this.resources[resource] += amount;
+    } else {
+      console.log("Invalid resource");
+    }
+  }
 }
+game.addResource("gold", 50)
+console.log(game.resources);

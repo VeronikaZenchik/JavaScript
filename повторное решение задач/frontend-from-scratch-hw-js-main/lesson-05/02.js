@@ -35,4 +35,14 @@ const gallery = {
   'The Scream': 'Edvard Munch',
 }
 
-function updateGallery() {}
+function updateGallery(obj, nameOfArt, newValue) {
+if(nameOfArt in gallery){
+      // Если произведение существует, обновляем его значение
+  gallery[nameOfArt] = newValue
+} else {
+      // Если произведения нет, добавляем его в объект
+  gallery[nameOfArt] = newValue
+}
+}
+updateGallery(gallery, 'Mona Lisa', 'Leonardo da Vinci, 1503-1506')
+console.log(gallery)
