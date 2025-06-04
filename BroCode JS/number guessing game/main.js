@@ -13,8 +13,10 @@ while(running) {
 
   if (isNaN(guess)) {
     window.alert("Please enter a valid number")
+    continue 
   } else if (guess < minNum || guess > maxNum){
-    window.alert("Please enter a valid number")    
+    window.alert("Please enter a valid number")
+    continue     
   } else {
     attempts++
     if (guess < answer) {
