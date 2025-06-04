@@ -31,3 +31,5 @@ myButton.onclick = function() {
   randomNum =  Math.floor(Math.random() *  (max - min + 1)) + min;
   myLabel.textContent = randomNum
 }
+
+
