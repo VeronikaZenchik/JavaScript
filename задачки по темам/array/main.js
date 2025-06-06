@@ -623,8 +623,7 @@ console.log(findMaxReduce([10, 20, 5, 30]));
 
 // Solution:
 const printArray = (arr) => {
-arr.forEach((num) => {console.log(num);
-})
+arr.forEach((num) => {console.log(num)})
 }
 printArray([1, 2, 3, 4, 5]);
 
@@ -672,6 +671,14 @@ const increaseArray = (arr, increment) => {
 const arr3336 = [1, 2, 3, 4, 5];
 increaseArray(arr3336, 2);
 console.log(arr3336);
+
+
+const exp = [1, 2, 3, 4, 5]
+exp.forEach(increase)
+function increase (arr4554, el) {
+  arr4554 = 
+  
+}
 
 
 // Задача 5: Подсчет количества элементов, удовлетворяющих условию
