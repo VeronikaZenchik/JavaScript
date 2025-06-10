@@ -9,3 +9,13 @@ function updateClock() {
 
 updateClock()
 setInterval(updateClock, 1000)
+
+
+
+// Format Currency
+let number = 123456.789
+
+// number = number.toLocaleString("ru-BY",{style: "currency", currency: "BYN"})
+// number = number.toLocaleString("en-US",{style: "currency", currency: "USD"})
+number = number.toLocaleString("de-DE",{style: "currency", currency: "EUR"})
+console.log(number);
