@@ -1,0 +1,10 @@
+body{
+  background-color: #5a5454;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+#myButton {
+  font-size: 2rem;
+}
