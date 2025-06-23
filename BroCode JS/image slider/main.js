@@ -2,9 +2,11 @@ const slides = document.querySelectorAll(".slides img")
 let slideIndex = 0
 let intervalId = null
 
-document.addEventListener("DOMContentLoaded", intializeSlider)
+document.addEventListener("DOMContentLoaded", initializeSlider)
+document.getElementById("prevBtn").addEventListener("click", prevSlide)
+document.getElementById("nextBtn").addEventListener("click", nextSlide)
 
-function intializeSlider() {
+function initializeSlider() {
 
   if(slides.length > 0){
     slides[0].classList.add("displaySLide")
