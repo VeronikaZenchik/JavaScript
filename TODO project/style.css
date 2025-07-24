@@ -1,0 +1,88 @@
+*,
+*::before,
+*::after{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a{
+  text-decoration: none;
+}
+
+ul{
+  list-style: none;
+}
+
+body{
+  background-image: url(./img/backgroundimg.png);
+  font-family: "Baloo Tammudu 2", sans-serif;
+  font-weight: 400;
+  font-size: 40px;
+  color: #fff;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; */
+}
+
+button{
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.title__container{
+  border-radius: 85px;
+  padding: 0px 63px;
+  max-width: 436px;
+  backdrop-filter: blur(32px);
+  background: rgba(217, 217, 217, 0.5);
+  margin-top: 60px;
+  margin-bottom: 36px;
+}
+
+.title{
+  font-family: "Averia Libre", sans-serif;
+  text-align: center;
+  font-weight: 400;
+  font-size: 64px;
+  color: transparent;
+  background-clip: text;
+  background-image: linear-gradient(180deg, #c4564d 0%, #864b49 100%);
+}
+
+
+.note{
+  border-radius: 7px;
+  padding: 0px 63px;
+  width: 614px;
+  height: 81px;
+  backdrop-filter: blur(32px);
+  background-color: rgba(196, 186, 186, 0.37);
+  border: #fff;
+}
+
+::placeholder{
+  color: #fff;
+  font-family: "Baloo Tammudu 2", sans-serif;
+  font-weight: 400;
+  font-size: 40px;
+  text-align: left;
+}
+
+
+
+.form__list{
+  border-radius: 2px;
+  padding: 0px 77px 0px 81px;
+  width: 250px;
+
+  backdrop-filter: blur(32px);
+  background: rgba(196, 186, 186, 0.37);
+}
+
+.form__list-menu{
+  display: flex;
+  flex-direction: column;
+}

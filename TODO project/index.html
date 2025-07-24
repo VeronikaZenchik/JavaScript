@@ -4,9 +4,35 @@
   <meta charset="UTF-8" />
   <title>TO DO list</title>
   <link rel="stylesheet" href="./style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Averia+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Baloo+2:wght@400..800&family=Baloo+Bhaina+2&family=Baloo+Tammudu+2:wght@400..800&display=swap" rel="stylesheet">
 </head>
 <body>
-  
+    <div class="title__container">
+      <h1 class="title">To-Do List</h1>
+    </div>
+
+    <main>
+      <section class="form">
+        <form class="form__notes" name="notes">
+          <div class="form__group">
+            <label for="note" class="form__notes-label"></label>
+            <input type="text" name="note" id="note" class="note" required placeholder="Write your task">
+          </div>
+        </form>
+        <button class="form__button" type="submit"><img src="./img/Plus.png" alt="Plus"></button>
+        <div class="form__list">
+            <ul class="form__list-menu">
+              <li class="form__list-list">ALL
+                <button class="form__list-button menuClose"><img src="./img/Chevron Down.png" alt=""></button>
+              </li>
+              <li class="form__list-list">Completed</li>
+              <li class="form__list-list">Incomplete</li>
+            </ul>
+        </div>
+      </section>
+    </main>
 
   <script src="./main.js"></script>
 </body>
