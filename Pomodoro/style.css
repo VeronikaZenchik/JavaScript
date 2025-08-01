@@ -34,14 +34,13 @@ img{
   max-width: 620px;
   margin: auto;
   gap: 10px;
-  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .header__title{
   color: white;
   margin: 0;
   padding: 10px 0px;
-  font-size: 20px;
+  font-size: 30px;
 }
 
 .space{
@@ -64,28 +63,72 @@ img{
 }
 
 .button-wrapper{
-
+display: flex;
+justify-content: center;
 }
 
 
 .button{
-  cursor: pointer;
   border: none;
   color: white;
-  height: 40px;
   margin: 0;
-  padding: 0px 12px;
-  font-size: 14px;
   border-radius: 4px;
-  box-shadow: 0px 6px 0px hsl(358, 0%, 92%);
+  font-family: ArialRounded;
   font-size: 16px;
   padding: 2px 12px;
   height: 28px;
+  cursor: pointer;
   background: none;
   box-shadow: none;
   font-weight: 300;
   border-radius: 8;
 }
 
-.button .active{
+.active{
+  border: none;
+  margin: 0;
+  border-radius: 4px;
+  font-family: ArialRounded;
+  font-size: 16px;
+  padding: 2px 12px;
+  height: 28px;
+  cursor: pointer;
+  background: none;
+  box-shadow: none;
+  border-radius: 8;
+  background-color: rgba(0, 0, 0, .15);
+  color: white;
+  opacity: 1;
+  font-weight: bold;
+}
 
+.timer__set{
+  font-size: 120px;
+  font-weight: bold;
+  margin-top: 20px;
+  text-align: center;
+  color: white;
+}
+
+.start__button{
+  display: flex;
+  justify-content: center;
+}
+
+.start{
+  cursor: pointer;
+  border: none;
+  margin: 0;
+  padding: 0px 12px;
+  border-radius: 4px;
+  box-shadow: 0px 6px 0px hsl(358, 0%, 92%);
+  font-family: ArialRounded;
+  font-size: 22px;
+  height: 55px;
+  margin-top: 20px;
+  color: rgb(186, 73, 73);
+  font-weight: bold;
+  width: 200px;
+  background-color: white;
+  transition: color 0.5s ease-in-out;
+}
