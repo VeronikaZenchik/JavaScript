@@ -110,12 +110,14 @@ justify-content: center;
   color: white;
 }
 
-.start__button{
+.buttons{
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-.start{
+.start, .pause, .reset{
   cursor: pointer;
   border: none;
   margin: 0;
